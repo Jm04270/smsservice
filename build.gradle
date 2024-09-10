@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.sms'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '3.3.0'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '3.3.0'
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: '3.3.0'
+    testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '3.3.0'
+    implementation 'net.nurigo:sdk:4.3.0'
+}
+
+test {
+    useJUnitPlatform()
+}
